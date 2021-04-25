@@ -4,5 +4,34 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+h1 {
+  color: rgb(178, 77, 228);
+}
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.delete-form button {
+  color: red;
+}
+.edit-form button {
+  color: yellow;
+}
+
+li {
+  list-style: none;
+}
+.add-form button {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: #4caf50; /* Green */
+}
+
+.add-form button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }

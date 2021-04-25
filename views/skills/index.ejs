@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Express-Skills</title>
   </head>
   <body>
@@ -12,9 +13,17 @@
     <ul>
       <% skills.forEach(function(s) { %>
       <li>
+        <form
+          action="/skills/<%= s.id %>?_method=DELETE"
+          class="delete-form"
+          method="POST"
+        >
+          <button type="submit">X</button>
+        </form>
         <a href="/skills/<%= s.id %>"><%= s.skill %></a>
       </li>
       <% }); %>
     </ul>
+    <a href="/skills/new">Add Dev-Skill</a>
   </body>
 </html>
